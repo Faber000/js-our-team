@@ -46,7 +46,7 @@ const teamMembers = [
 const container = document.querySelector(".teamContainer");
 
 for(let i = 0; i < teamMembers.length; i++) {
-    const post = `
+    let post = `
         <div class="card">
             <div class="div-picture">
                 <img class="picture" src="${teamMembers[i].picture}" alt="">
@@ -58,4 +58,26 @@ for(let i = 0; i < teamMembers.length; i++) {
         </div> `;
 
     container.innerHTML += post; 
+}
+
+button = document.getElementById("addMemberButton");
+button.addEventListener('click', addMember);
+
+function addMember() {
+    inputName = document.getElementById("name").value;
+    inputRole = document.getElementById("role").value;
+    inputImage = document.getElementById("image").value;
+
+    let post = `
+        <div class="card">
+            <div class="div-picture">
+                <img class="picture" src="${inputImage}" alt="">
+            </div>
+            <div class="memberInfo">
+                <h2>${inputName}</h2>
+                <small>${inputRole}<small>
+            </div>
+        </div> `;
+
+    container.innerHTML += post;
 }
