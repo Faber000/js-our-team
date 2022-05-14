@@ -52,7 +52,7 @@ for(let i = 0; i < teamMembers.length; i++) {
                 <img class="picture" src="${teamMembers[i].picture}" alt="">
             </div>
             <div class="memberInfo">
-                <h2>${teamMembers[i].firstName}${teamMembers[i].lastName}</h2>
+                <h2>${teamMembers[i].firstName}${" "}${teamMembers[i].lastName}</h2>
                 <small>${teamMembers[i].role}<small>
             </div>
         </div> `;
